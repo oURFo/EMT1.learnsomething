@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMT-1 學習小遊戲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="main-header">
+            <h1>EMT-1 救護小英雄</h1>
+        </header>
+
+        <main id="main-menu" class="menu-container">
+            <button class="menu-btn learning-btn" onclick="showScreen('learning-menu')">
+                <span class="icon">📖</span>
+                <span class="text">學習卡</span>
+            </button>
+
+            <button class="menu-btn test-btn" onclick="showScreen('test-mode')">
+                <span class="icon">🚑</span>
+                <span class="text">測 試</span>
+            </button>
+        </main>
+
+        <main id="learning-menu" class="menu-container hidden">
+            <button class="menu-btn category-btn" onclick="selectCategory('regulations')">
+                <span class="icon">📜</span>
+                <span class="text">法規</span>
+            </button>
+            <button class="menu-btn category-btn" onclick="selectCategory('assessment')">
+                <span class="icon">📋</span>
+                <span class="text">急救評估</span>
+            </button>
+            <button class="menu-btn category-btn" onclick="selectCategory('methods')">
+                <span class="icon">🩹</span>
+                <span class="text">急救方法</span>
+            </button>
+
+            <button class="back-btn" onclick="showScreen('main-menu')">
+                <span class="icon">↩️</span> 返回主選單
+            </button>
+        </main>
+
+        <main id="card-display" class="menu-container hidden">
+            <div class="card-header">
+                <button class="back-btn small-back" onclick="showScreen('learning-menu')">
+                    <span class="icon">↩️</span> 返回
+                </button>
+                <h2 id="category-title">類別標題</h2>
+            </div>
+
+            <div class="card-container" id="flashcard">
+                <div class="card-content">
+                    <div class="card-question">
+                        <h3>問題</h3>
+                        <p id="question-text">這裡會顯示問題...</p>
+                    </div>
+                    <div class="card-divider"></div>
+                    <div class="card-answer">
+                        <h3>解答</h3>
+                        <p id="answer-text">這裡會顯示解答...</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <p>加油！未來的救護員！</p>
+        </footer>
+    </div>
+    <script src="game_data/data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
