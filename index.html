@@ -14,18 +14,20 @@
             <h1>EMT-1 救護小英雄</h1>
         </header>
 
+        <!-- Main Menu -->
         <main id="main-menu" class="menu-container">
             <button class="menu-btn learning-btn" onclick="showScreen('learning-menu')">
                 <span class="icon">📖</span>
                 <span class="text">學習卡</span>
             </button>
 
-            <button class="menu-btn test-btn" onclick="showScreen('test-mode')">
+            <button class="menu-btn test-btn" onclick="showScreen('test-menu')">
                 <span class="icon">🚑</span>
                 <span class="text">測 試</span>
             </button>
         </main>
 
+        <!-- Learning Menu -->
         <main id="learning-menu" class="menu-container hidden">
             <button class="menu-btn category-btn" onclick="selectCategory('regulations')">
                 <span class="icon">📜</span>
@@ -45,6 +47,7 @@
             </button>
         </main>
 
+        <!-- Card Display -->
         <main id="card-display" class="menu-container hidden">
             <div class="card-header">
                 <button class="back-btn small-back" onclick="showScreen('learning-menu')">
@@ -66,6 +69,73 @@
                     </div>
                 </div>
             </div>
+        </main>
+
+        <!-- Test Menu -->
+        <main id="test-menu" class="menu-container hidden">
+            <button class="menu-btn category-btn" onclick="startTest('regulations')">
+                <span class="icon">📜</span>
+                <span class="text">法規測驗</span>
+            </button>
+            <button class="menu-btn category-btn" onclick="startTest('assessment')">
+                <span class="icon">📋</span>
+                <span class="text">評估測驗</span>
+            </button>
+            <button class="menu-btn category-btn" onclick="startTest('methods')">
+                <span class="icon">🩹</span>
+                <span class="text">方法測驗</span>
+            </button>
+
+            <button class="back-btn" onclick="showScreen('main-menu')">
+                <span class="icon">↩️</span> 返回主選單
+            </button>
+        </main>
+
+        <!-- Test Interface -->
+        <main id="test-interface" class="menu-container hidden">
+            <div class="card-header">
+                <button class="back-btn small-back" onclick="showScreen('test-menu')">
+                    <span class="icon">↩️</span> 退出
+                </button>
+                <div class="test-stats">
+                    <span id="test-progress">1 / 10</span>
+                    <span id="test-timer">00:00</span>
+                </div>
+            </div>
+
+            <div class="test-container">
+                <div class="test-question-box">
+                    <p id="test-question-text">題目載入中...</p>
+                </div>
+                <div class="test-options" id="test-options">
+                    <!-- Options will be generated here -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Test Results -->
+        <main id="test-results" class="menu-container hidden">
+            <div class="results-header">
+                <h2>測驗結果</h2>
+            </div>
+            <div class="results-summary">
+                <div class="score-circle">
+                    <span id="final-score">100%</span>
+                    <span class="score-label">正確率</span>
+                </div>
+                <p class="time-taken">作答時間: <span id="final-time">00:00</span></p>
+            </div>
+
+            <div class="review-section">
+                <h3>錯誤題目檢討</h3>
+                <div id="review-list" class="review-list">
+                    <!-- Wrong answers will be listed here -->
+                </div>
+            </div>
+
+            <button class="back-btn" onclick="showScreen('main-menu')">
+                <span class="icon">🏠</span> 返回主畫面
+            </button>
         </main>
 
         <footer class="main-footer">
