@@ -25,6 +25,41 @@
                 <span class="icon">🚑</span>
                 <span class="text">測 試</span>
             </button>
+
+            <button class="menu-btn knowledge-btn" onclick="showScreen('knowledge-menu')">
+                <span class="icon">💡</span>
+                <span class="text">知識卡</span>
+            </button>
+        </main>
+
+        <!-- Knowledge Menu -->
+        <main id="knowledge-menu" class="menu-container hidden">
+            <button class="menu-btn category-btn" onclick="showKnowledgeDetail('avpu')">
+                <span class="icon">🧠</span>
+                <span class="text">意識評估 (AVPU)</span>
+            </button>
+            <button class="menu-btn category-btn" onclick="showKnowledgeDetail('gcs')">
+                <span class="icon">🔢</span>
+                <span class="text">昏迷指數 (GCS)</span>
+            </button>
+
+            <button class="back-btn" onclick="showScreen('main-menu')">
+                <span class="icon">↩️</span> 返回主選單
+            </button>
+        </main>
+
+        <!-- Knowledge Detail -->
+        <main id="knowledge-detail" class="menu-container hidden">
+            <div class="card-header">
+                <button class="back-btn small-back" onclick="showScreen('knowledge-menu')">
+                    <span class="icon">↩️</span> 返回
+                </button>
+                <h2 id="knowledge-title">標題</h2>
+            </div>
+
+            <div class="knowledge-content" id="knowledge-content">
+                <!-- Content goes here -->
+            </div>
         </main>
 
         <!-- Learning Menu -->

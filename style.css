@@ -377,3 +377,42 @@ body {
     color: var(--primary-color);
     font-size: 0.9rem;
 }
+.knowledge-btn { border-left: 5px solid #2ecc71; }
+
+.knowledge-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    overflow-y: auto;
+    max-height: 60vh;
+}
+
+.knowledge-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.knowledge-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.knowledge-item {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.knowledge-item strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+

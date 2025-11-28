@@ -16,20 +16,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check if gameData is loaded
     if (typeof gameData === 'undefined') {
         console.error("Game data not loaded!");
-        alert("資料載入失敗，請檢查 data.js");
+        alert("資料載入錯誤，請檢查 data.js");
         return;
     }
 
     // Add swipe listeners
     const cardContainer = document.getElementById('flashcard');
-    cardContainer.addEventListener('mousedown', handleTouchStart);
-    cardContainer.addEventListener('touchstart', handleTouchStart);
+    if (cardContainer) {
+        cardContainer.addEventListener('mousedown', handleTouchStart);
+        cardContainer.addEventListener('touchstart', handleTouchStart);
 
-    document.addEventListener('mousemove', handleTouchMove);
-    document.addEventListener('touchmove', handleTouchMove);
+        document.addEventListener('mousemove', handleTouchMove);
+        document.addEventListener('touchmove', handleTouchMove);
 
-    document.addEventListener('mouseup', handleTouchEnd);
-    document.addEventListener('touchend', handleTouchEnd);
+        document.addEventListener('mouseup', handleTouchEnd);
+        document.addEventListener('touchend', handleTouchEnd);
+    }
 });
 
 // Screen Navigation
@@ -40,7 +42,10 @@ function showScreen(screenId) {
     });
 
     // Show target screen
-    document.getElementById(screenId).classList.remove('hidden');
+    const target = document.getElementById(screenId);
+    if (target) {
+        target.classList.remove('hidden');
+    }
 
     // Reset states if returning to main menu
     if (screenId === 'main-menu') {
@@ -72,7 +77,7 @@ function selectCategory(category) {
         showScreen('card-display');
         showCard();
     } else {
-        alert("此類別暫無資料！");
+        alert("此類別尚無資料！");
     }
 }
 
@@ -163,7 +168,7 @@ function handleTouchEnd(e) {
 
 function startTest(category) {
     if (!gameData[category] || gameData[category].length < 10) {
-        alert("此類別題目不足，無法開始測驗！");
+        alert("此類別題目不足 10 題，無法進行測驗！");
         return;
     }
 
@@ -253,7 +258,7 @@ function getDistractors(category, correctAnswer) {
 
     // Fallback if not enough unique answers (unlikely with >50 qs)
     while (distractors.length < 3) {
-        distractors.push("無其他選項");
+        distractors.push("以上皆非");
     }
 
     return distractors;
@@ -310,7 +315,7 @@ function endTest() {
     list.innerHTML = '';
 
     if (wrongAnswers.length === 0) {
-        list.innerHTML = '<p style="text-align:center; color:#27ae60;">太棒了！全對！🎉</p>';
+        list.innerHTML = '<p style="text-align:center; color:#27ae60;">太棒了！全對！</p>';
     } else {
         wrongAnswers.forEach(item => {
             const div = document.createElement('div');
@@ -321,5 +326,60 @@ function endTest() {
             `;
             list.appendChild(div);
         });
+    }
+}
+
+// Knowledge Card Data
+const knowledgeData = {
+    'avpu': {
+        title: '意識評估 (AVPU)',
+        content: `
+            <h3>AVPU 評估法</h3>
+            <div class='knowledge-item'>
+                <strong>A (Alert) - 清醒</strong>
+                <p>病患清醒，對人、時、地清楚。</p>
+            </div>
+            <div class='knowledge-item'>
+                <strong>V (Verbal) - 對聲音有反應</strong>
+                <p>病患對呼叫聲有反應（如張眼、說話）。</p>
+            </div>
+            <div class='knowledge-item'>
+                <strong>P (Pain) - 對疼痛有反應</strong>
+                <p>病患僅對疼痛刺激（如捏壓指甲床）有反應。</p>
+            </div>
+            <div class='knowledge-item'>
+                <strong>U (Unresponsive) - 無反應</strong>
+                <p>病患對聲音及疼痛刺激均無反應。</p>
+            </div>
+        `
+    },
+    'gcs': {
+        title: '昏迷指數 (GCS)',
+        content: `
+            <h3>GCS 昏迷指數</h3>
+            <div class='knowledge-item'>
+                <strong>E (Eye Opening) 睜眼反應</strong>
+                <p>4：自發性睜眼<br>3：聽到聲音睜眼<br>2：對疼痛睜眼<br>1：無反應</p>
+            </div>
+            <div class='knowledge-item'>
+                <strong>V (Verbal Response) 語言反應</strong>
+                <p>5：言語清晰，人時地清楚<br>4：言語混淆，答非所問<br>3：單字，言語不恰當<br>2：發出無意義聲音<br>1：無反應</p>
+            </div>
+            <div class='knowledge-item'>
+                <strong>M (Motor Response) 運動反應</strong>
+                <p>6：聽從指令動作<br>5：對疼痛定位（撥開）<br>4：對疼痛閃避<br>3：去皮質屈曲（異常彎曲）<br>2：去大腦伸展（異常伸直）<br>1：無反應</p>
+            </div>
+        `
+    }
+};
+
+function showKnowledgeDetail(topic) {
+    const data = knowledgeData[topic];
+    if (data) {
+        document.getElementById('knowledge-title').innerText = data.title;
+        document.getElementById('knowledge-content').innerHTML = data.content;
+        showScreen('knowledge-detail');
+    } else {
+        alert('內容建置中！');
     }
 }
