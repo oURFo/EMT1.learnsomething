@@ -45,6 +45,7 @@ function showScreen(screenId) {
     const target = document.getElementById(screenId);
     if (target) {
         target.classList.remove('hidden');
+        target.scrollTop = 0;
     }
 
     // Reset states if returning to main menu
@@ -101,6 +102,9 @@ function showCard() {
 
     document.getElementById('question-text').innerText = card.question;
     document.getElementById('answer-text').innerText = card.answer;
+
+    // Scroll to top
+    document.getElementById('card-display').scrollTop = 0;
 }
 
 function nextCard() {
@@ -212,6 +216,9 @@ function showTestQuestion() {
     const q = testQuestions[currentTestIndex];
     document.getElementById('test-progress').innerText = `${currentTestIndex + 1} / 10`;
     document.getElementById('test-question-text').innerText = q.question;
+
+    // Scroll to top
+    document.getElementById('test-interface').scrollTop = 0;
 
     // Generate Options
     const optionsContainer = document.getElementById('test-options');
@@ -612,8 +619,8 @@ function startGCSAssessment() {
     }
 
     gcsQuestions = [...gameData.gcsQuestions];
-    // Optional: Shuffle GCS questions if needed
-    // shuffleDeck(gcsQuestions); 
+    // Shuffle GCS questions
+    shuffleDeck(gcsQuestions);
     currentGCSIndex = 0;
 
     showScreen('gcs-assessment');
@@ -627,6 +634,9 @@ function loadGCSQuestion() {
     // Reset UI
     document.getElementById('gcs-question-title').innerText = q.title;
     document.getElementById('gcs-scenario-text').innerHTML = q.scenario;
+
+    // Scroll to top
+    document.getElementById('gcs-assessment').scrollTop = 0;
 
     // Reset Selects
     document.getElementById('gcs-e-select').value = "0";
