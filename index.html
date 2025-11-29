@@ -34,6 +34,10 @@
 
         <!-- Knowledge Menu -->
         <main id="knowledge-menu" class="menu-container hidden">
+            <button class="menu-btn category-btn" onclick="showKnowledgeDetail('professional')">
+                <span class="icon">🧰</span>
+                <span class="text">專業展示</span>
+            </button>
             <button class="menu-btn category-btn" onclick="showKnowledgeDetail('avpu')">
                 <span class="icon">🧠</span>
                 <span class="text">意識評估 (AVPU)</span>
@@ -41,6 +45,10 @@
             <button class="menu-btn category-btn" onclick="showKnowledgeDetail('gcs')">
                 <span class="icon">🔢</span>
                 <span class="text">昏迷指數 (GCS)</span>
+            </button>
+            <button class="menu-btn category-btn" onclick="showKnowledgeDetail('handover')">
+                <span class="icon">🗣️</span>
+                <span class="text">交班步驟 (ISBAR & IMIST)</span>
             </button>
 
             <button class="back-btn" onclick="showScreen('main-menu')">

@@ -370,6 +370,76 @@ const knowledgeData = {
                 <p>6：聽從指令動作<br>5：對疼痛定位（撥開）<br>4：對疼痛閃避<br>3：去皮質屈曲（異常彎曲）<br>2：去大腦伸展（異常伸直）<br>1：無反應</p>
             </div>
         `
+    },
+    'professional': {
+        title: '急救專業展示',
+        content: `
+            <h3>急救器材與專業展示</h3>
+            <div class='knowledge-item'>
+                <p>作為一名專業的 EMT，除了具備豐富的急救知識與技術外，對於急救器材的熟悉度與擺放管理也是展現專業的重要一環。</p>
+                <p>整齊、有序的器材擺放，不僅能讓救護人員在緊急時刻迅速取得所需裝備，更能提升團隊的救援效率與安全性。</p>
+            </div>
+            
+            <h3>創傷器材擺放</h3>
+            <div class='knowledge-item' style="text-align: center;">
+                <img src="game_data/創傷器材位置.jpg" alt="創傷器材擺放" style="width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <p style="margin-top: 10px; color: #666; font-size: 0.9em;">創傷急救器材標準擺放示意圖</p>
+            </div>
+
+            <h3>非創傷器材擺放</h3>
+            <div class='knowledge-item' style="text-align: center;">
+                <img src="game_data/非創器材位置.jpg" alt="非創傷器材擺放" style="width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <p style="margin-top: 10px; color: #666; font-size: 0.9em;">非創傷急救器材標準擺放示意圖</p>
+            </div>
+        `
+    },
+    'handover': {
+        title: '交班步驟 (ISBAR & IMIST)',
+        content: `
+            <h3>ISBAR 交班模式</h3>
+            <div class='knowledge-item'>
+                <strong>I (Introduction) - 自我介紹</strong>
+                <p>確認交班對象，表明自己身分。</p>
+            </div>
+            <div class='knowledge-item'>
+                <strong>S (Situation) - 情境</strong>
+                <p>發生了什麼事？病患的主訴或主要問題。</p>
+            </div>
+            <div class='knowledge-item'>
+                <strong>B (Background) - 背景</strong>
+                <p>病患的過去病史、過敏史、發生機轉等背景資訊。</p>
+            </div>
+            <div class='knowledge-item'>
+                <strong>A (Assessment) - 評估</strong>
+                <p>生命徵象、身體評估發現、傷勢等。</p>
+            </div>
+            <div class='knowledge-item'>
+                <strong>R (Recommendation) - 建議/處置</strong>
+                <p>已執行的處置、建議後續處置或特殊需求。</p>
+            </div>
+
+            <h3>IMIST 創傷交班模式</h3>
+            <div class='knowledge-item'>
+                <strong>I (Identification) - 身分</strong>
+                <p>病患姓名、性別、年齡。</p>
+            </div>
+            <div class='knowledge-item'>
+                <strong>M (Mechanism) - 機轉</strong>
+                <p>受傷機轉或主訴 (Medical Complaint)。</p>
+            </div>
+            <div class='knowledge-item'>
+                <strong>I (Injuries) - 傷勢</strong>
+                <p>發現的傷勢或檢查結果 (Information)。</p>
+            </div>
+            <div class='knowledge-item'>
+                <strong>S (Signs) - 徵象</strong>
+                <p>生命徵象 (GCS, BP, HR, RR, SpO2)。</p>
+            </div>
+            <div class='knowledge-item'>
+                <strong>T (Treatment) - 處置</strong>
+                <p>已給予的急救處置。</p>
+            </div>
+        `
     }
 };
 
