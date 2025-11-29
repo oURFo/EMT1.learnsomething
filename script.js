@@ -440,6 +440,150 @@ const knowledgeData = {
                 <p>已給予的急救處置。</p>
             </div>
         `
+    },
+    'trauma_process': {
+        title: '創傷處置流程 (X-意識-ABCDE)',
+        content: `
+            <h3>X (Exsanguinating hemorrhage) - 大量出血控制</h3>
+            <div class='knowledge-item'>
+                <p><strong>優先處理危及生命的四肢或軀幹大量出血。</strong></p>
+                <p>處置：直接加壓止血、使用止血帶 (Tourniquet)。若發現噴射狀或大量湧出的出血，應立即控制，甚至優先於呼吸道處置。</p>
+            </div>
+
+            <h3>意識 (Consciousness) - 快速評估</h3>
+            <div class='knowledge-item'>
+                <p><strong>使用 AVPU 評估病患意識狀態：</strong></p>
+                <ul>
+                    <li><strong>A (Alert)</strong>: 清醒。</li>
+                    <li><strong>V (Verbal)</strong>: 對聲音有反應。</li>
+                    <li><strong>P (Pain)</strong>: 對疼痛有反應。</li>
+                    <li><strong>U (Unresponsive)</strong>: 無反應。</li>
+                </ul>
+                <p>若意識不清，需立即考慮呼吸道維持與頸椎保護。</p>
+            </div>
+
+            <h3>A (Airway) - 呼吸道評估</h3>
+            <div class='knowledge-item'>
+                <p><strong>以看、聽方式評估呼吸道是否阻塞。</strong></p>
+                <p><strong>處置：</strong></p>
+                <ul>
+                    <li>壓額抬下巴 (無頸椎疑慮) 或 推下顎法 (懷疑頸椎損傷)。</li>
+                    <li>清除口中異物、抽吸分泌物。</li>
+                    <li>使用口咽 (OPA) 或 鼻咽 (NPA) 呼吸道輔助。</li>
+                </ul>
+            </div>
+
+            <h3>B (Breathing) - 呼吸評估</h3>
+            <div class='knowledge-item'>
+                <p><strong>以看、聽方式評估呼吸品質、深、淺、快、慢及是否有明顯異常呼吸音，評估不超過10秒。</strong></p>
+                <p><strong>處置：</strong></p>
+                <ul>
+		    <li>給予血氧機檢查血氧數值。</li>
+                    <li>給予氧氣 (鼻導管或非再吸入面罩)。</li>
+                    <li>檢查並處置致命性胸部創傷 (如張力性氣胸、開放性氣胸、連枷胸)。</li>
+                    <li>若呼吸衰竭或過慢，給予 BVM 輔助呼吸。</li>
+                </ul>
+            </div>
+
+            <h3>C (Circulation) - 循環評估</h3>
+            <div class='knowledge-item'>
+                <p><strong>評估整體循環是否正常。</strong></p>
+                <p><strong>評估項目：</strong></p>
+                <ul>
+                    <li>評估橈動脈是否有且對稱，評估不超過10秒，若否則檢查頸動脈。</li>
+                    <li>膚色是否正常。</li>
+                    <li>肢體皮膚是否濕冷。</li>
+                    <li>微血管充填時間 (CRT)是否>2秒。</li>
+                    <li>檢查骨盆是否固定。</li>
+                </ul>
+                <p><strong>處置：</strong>尋找並控制其他出血點，評估休克徵象。</p>
+            </div>
+
+            <h3>D (Disability) - 神經失能評估</h3>
+            <div class='knowledge-item'>
+                <p><strong>快速神經學檢查。</strong></p>
+                <ul>
+                    <li><strong>GCS 昏迷指數</strong>: 評估 E (睜眼)、V (語言)、M (運動)。</li>
+                    <li><strong>瞳孔</strong>: 大小、對光反應。</li>
+                    <li><strong>四肢功能</strong>: 感覺與運動功能 (MP)。</li>
+                </ul>
+            </div>
+
+            <h3>E (Exposure/Environment) - 暴露與環境控制</h3>
+            <div class='knowledge-item'>
+                <p><strong>暴露傷患身體以檢查潛在傷口，並預防低體溫。</strong></p>
+                <ul>
+                    <li>快速檢查頭、頸、胸、腹、骨盆、肢體是否有致命性傷口。</li>
+                    <li>頸靜脈是否怒張或塌陷、氣管是否偏移、是否有皮下氣腫、後頸是否壓痛。</li>
+                    <li>剪開衣物檢查 (注意隱私)。</li>
+                    <li>給予保暖 (毛毯、調節車內溫度)。</li>
+                </ul>
+            </div>
+        `
+    },
+    'nontrauma_process': {
+        title: '非創傷處置流程 (意識-ABC)',
+        content: `
+            <h3>意識 (Consciousness) - 快速評估</h3>
+            <div class='knowledge-item'>
+                <p><strong>使用 AVPU 評估病患意識狀態：</strong></p>
+                <ul>
+                    <li><strong>A (Alert)</strong>: 清醒。</li>
+                    <li><strong>V (Verbal)</strong>: 對聲音有反應。</li>
+                    <li><strong>P (Pain)</strong>: 對疼痛有反應。</li>
+                    <li><strong>U (Unresponsive)</strong>: 無反應。</li>
+                </ul>
+                <p>若意識不清，需立即考慮呼吸道維持。</p>
+            </div>
+
+            <h3>A (Airway) - 評估呼吸道</h3>
+            <div class='knowledge-item'>
+                <p><strong>確認呼吸道是否暢通。</strong></p>
+                <p><strong>評估：</strong></p>
+                <ul>
+                    <li>病患能否說話？有無呼吸雜音（如鼾音、喘鳴音）？</li>
+                </ul>
+                <p><strong>處置：</strong></p>
+                <ul>
+                    <li>壓額抬下巴法開放呼吸道。</li>
+                    <li>清除口中異物、抽吸分泌物。</li>
+                    <li>使用口咽 (OPA) 或 鼻咽 (NPA) 呼吸道輔助。</li>
+                </ul>
+            </div>
+
+            <h3>B (Breathing) - 評估呼吸</h3>
+            <div class='knowledge-item'>
+                <p><strong>以看、聽方式評估呼吸品質、深、淺、快、慢及是否有明顯異常呼吸音，評估不超過10秒。</strong></p>
+                <p><strong>評估項目：</strong></p>
+                <ul>
+                    <li>呼吸速率 (過快/過慢)。</li>
+                    <li>呼吸深度 (深/淺)。</li>
+                    <li>血氧濃度 (SpO2)。</li>
+                </ul>
+                <p><strong>處置：</strong></p>
+                <ul>
+                    <li>給予氧氣 (鼻導管或非再吸入面罩)。</li>
+                    <li>若呼吸衰竭，給予 BVM 輔助呼吸。</li>
+                </ul>
+            </div>
+
+            <h3>C (Circulation) - 評估循環</h3>
+            <div class='knowledge-item'>
+                <p><strong>評估循環狀態。</strong></p>
+                <p><strong>評估項目：</strong></p>
+                <ul>
+                    <li>評估橈動脈是否有且對稱，評估不超過10秒，若否則檢查頸動脈。</li>
+                    <li>膚色是否正常。</li>
+                    <li>肢體皮膚是否濕冷。</li>
+                    <li>微血管充填時間 (CRT)是否>2秒。</li>
+                </ul>
+                <p><strong>處置：</strong></p>
+                <ul>
+                    <li>若有休克徵象，給予保暖、抬高下肢 (若無禁忌症)。</li>
+                    <li>若無脈搏，立即開始 CPR。</li>
+                </ul>
+            </div>
+        `
     }
 };
 
