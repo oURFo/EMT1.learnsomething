@@ -30,6 +30,11 @@
                 <span class="icon">💡</span>
                 <span class="text">知識卡</span>
             </button>
+
+            <button class="menu-btn assessment-btn" onclick="startGCSAssessment()">
+                <span class="icon">🔢</span>
+                <span class="text">GCS 評估</span>
+            </button>
         </main>
 
         <!-- Knowledge Menu -->
@@ -75,6 +80,66 @@
 
             <div class="knowledge-content" id="knowledge-content">
                 <!-- Content goes here -->
+            </div>
+        </main>
+
+        <!-- GCS Assessment Screen -->
+        <main id="gcs-assessment" class="menu-container hidden">
+            <div class="card-header">
+                <button class="back-btn small-back" onclick="showScreen('main-menu')">
+                    <span class="icon">↩️</span> 返回
+                </button>
+                <h2>GCS 評估工具</h2>
+            </div>
+            <div class="gcs-container">
+                <div class="gcs-scenario-box">
+                    <h3 id="gcs-question-title">題目載入中...</h3>
+                    <div id="gcs-scenario-text" class="scenario-text"></div>
+                </div>
+
+                <div class="gcs-input-area">
+                    <div class="gcs-select-group">
+                        <label>E (睜眼反應):</label>
+                        <select id="gcs-e-select">
+                            <option value="0">請選擇</option>
+                            <option value="4">4 - 自動張開</option>
+                            <option value="3">3 - 對聲音有反應</option>
+                            <option value="2">2 - 對痛有反應</option>
+                            <option value="1">1 - 無反應</option>
+                        </select>
+                    </div>
+                    <div class="gcs-select-group">
+                        <label>V (語言反應):</label>
+                        <select id="gcs-v-select">
+                            <option value="0">請選擇</option>
+                            <option value="5">5 - 清醒/有條理</option>
+                            <option value="4">4 - 混亂/對話</option>
+                            <option value="3">3 - 單字/不適當</option>
+                            <option value="2">2 - 呻吟/無法理解</option>
+                            <option value="1">1 - 無反應</option>
+                        </select>
+                    </div>
+                    <div class="gcs-select-group">
+                        <label>M (運動反應):</label>
+                        <select id="gcs-m-select">
+                            <option value="0">請選擇</option>
+                            <option value="6">6 - 聽從指令</option>
+                            <option value="5">5 - 定位疼痛</option>
+                            <option value="4">4 - 縮回反應</option>
+                            <option value="3">3 - 異常屈曲 (去皮質)</option>
+                            <option value="2">2 - 異常伸展 (去大腦)</option>
+                            <option value="1">1 - 無反應</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button id="gcs-submit-btn" class="action-btn" onclick="checkGCSAnswer()">提交答案</button>
+
+                <div id="gcs-result" class="result-box hidden">
+                    <h3 id="gcs-result-title"></h3>
+                    <p id="gcs-result-text"></p>
+                    <button id="gcs-next-btn" class="action-btn" onclick="nextGCSQuestion()">再來一題</button>
+                </div>
             </div>
         </main>
 

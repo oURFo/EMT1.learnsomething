@@ -597,3 +597,97 @@ function showKnowledgeDetail(topic) {
         alert('內容建置中！');
     }
 }
+
+// ==========================================
+// GCS Assessment Logic
+// ==========================================
+
+let gcsQuestions = [];
+let currentGCSIndex = 0;
+
+function startGCSAssessment() {
+    if (!gameData.gcsQuestions || gameData.gcsQuestions.length === 0) {
+        alert("GCS 題目載入失敗！");
+        return;
+    }
+
+    gcsQuestions = [...gameData.gcsQuestions];
+    // Optional: Shuffle GCS questions if needed
+    // shuffleDeck(gcsQuestions); 
+    currentGCSIndex = 0;
+
+    showScreen('gcs-assessment');
+    loadGCSQuestion();
+}
+
+function loadGCSQuestion() {
+    const q = gcsQuestions[currentGCSIndex];
+    if (!q) return;
+
+    // Reset UI
+    document.getElementById('gcs-question-title').innerText = q.title;
+    document.getElementById('gcs-scenario-text').innerHTML = q.scenario;
+
+    // Reset Selects
+    document.getElementById('gcs-e-select').value = "0";
+    document.getElementById('gcs-v-select').value = "0";
+    document.getElementById('gcs-m-select').value = "0";
+
+    // Reset Result
+    const resultBox = document.getElementById('gcs-result');
+    resultBox.classList.add('hidden');
+    resultBox.classList.remove('correct-box', 'wrong-box');
+
+    // Enable Submit Button
+    document.getElementById('gcs-submit-btn').disabled = false;
+    document.getElementById('gcs-submit-btn').innerText = "提交答案";
+}
+
+function checkGCSAnswer() {
+    const eVal = parseInt(document.getElementById('gcs-e-select').value);
+    const vVal = parseInt(document.getElementById('gcs-v-select').value);
+    const mVal = parseInt(document.getElementById('gcs-m-select').value);
+
+    if (eVal === 0 || vVal === 0 || mVal === 0) {
+        alert("請完成所有項目的評估！");
+        return;
+    }
+
+    const q = gcsQuestions[currentGCSIndex];
+    const isCorrect = (eVal === q.answer.e && vVal === q.answer.v && mVal === q.answer.m);
+
+    showGCSResult(isCorrect, q);
+}
+
+function showGCSResult(isCorrect, q) {
+    const resultBox = document.getElementById('gcs-result');
+    const title = document.getElementById('gcs-result-title');
+    const text = document.getElementById('gcs-result-text');
+    const submitBtn = document.getElementById('gcs-submit-btn');
+
+    resultBox.classList.remove('hidden');
+    submitBtn.disabled = true;
+
+    if (isCorrect) {
+        resultBox.className = 'result-box correct-box';
+        title.innerText = "答對了！";
+        text.innerText = `太棒了！判斷完全正確。\n答案：${q.explanation}`;
+    } else {
+        resultBox.className = 'result-box wrong-box';
+        title.innerText = "答錯了！";
+        text.innerHTML = `正確答案是：<strong>${q.explanation}</strong><br>
+                          您的回答：E${document.getElementById('gcs-e-select').value} 
+                          V${document.getElementById('gcs-v-select').value} 
+                          M${document.getElementById('gcs-m-select').value}`;
+    }
+}
+
+function nextGCSQuestion() {
+    currentGCSIndex++;
+    if (currentGCSIndex >= gcsQuestions.length) {
+        alert("恭喜！您已完成所有 GCS 練習題！");
+        showScreen('main-menu');
+    } else {
+        loadGCSQuestion();
+    }
+}
