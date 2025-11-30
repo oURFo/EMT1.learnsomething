@@ -599,9 +599,9 @@ const knowledgeData = {
             <div class='knowledge-item'>
                 <p><strong>符合下列任一項即為危急個案 (ALS)：</strong></p>
                 <ul>
-                    <li><strong>意識不清</strong>: GCS < 13 分。</li>
+                    <li><strong>意識不清</strong>: GCS < 14 分。</li>
                     <li><strong>呼吸異常</strong>: 呼吸次數 < 10 或 > 29 次/分。</li>
-                    <li><strong>休克徵象</strong>: 收縮壓 (SBP) < 90 mmHg。</li>
+                    <li><strong>休克徵象</strong>: 收縮壓 (SBP) < 90 或 > 220 mmHg。</li>
                     <li><strong>脈搏異常</strong>: 脈搏 < 50 或 > 140 次/分。</li>
                     <li><strong>體溫異常</strong>: 體溫 > 41°C 或 < 32°C。</li>
                     <li><strong>血氧偏低</strong>: SpO2 < 90%。</li>
@@ -698,19 +698,19 @@ const knowledgeData = {
                 <p><strong>適應症 (Indications)：</strong></p>
                 <ul>
                     <li>意識不清但有嘔吐反射 (無法使用 OPA)。</li>
-                    <li>牙關緊閉或口腔創傷。</li>
                 </ul>
                 <p><strong>禁忌症 (Contraindications)：</strong></p>
                 <ul>
-                    <li>懷疑顱底骨折 (熊貓眼、耳後瘀斑)。</li>
-                    <li>顏面嚴重創傷。</li>
-                    <li>鼻孔阻塞或鼻部感染。</li>
+                    <li>熊貓眼。</li>
+                    <li>鼻、耳流出清澈液或是血。</li>
+                    <li>耳後瘀青。</li>
+                    <li>懷疑顱底骨折。</li>
                 </ul>
                 <p><strong>操作流程：</strong></p>
                 <ol>
                     <li><strong>測量</strong>: 鼻尖至耳垂。</li>
                     <li><strong>潤滑</strong>: 使用水溶性潤滑劑。</li>
-                    <li><strong>置入</strong>: 選擇較大鼻孔，凹面朝向鼻中膈，垂直臉部緩慢推入。若遇阻力，勿強行推入，可旋轉或換另一側鼻孔。</li>
+                    <li><strong>置入</strong>: 選擇較大鼻孔，凹面朝向下，垂直臉部緩慢推入。若遇阻力，勿強行推入，可旋轉或換另一側鼻孔。</li>
                 </ol>
             </div>
         `
@@ -773,7 +773,7 @@ const knowledgeData = {
                 <ul>
                     <li><strong>AED 提示分析</strong>: 停止 CPR，不要觸碰病患。</li>
                     <li><strong>交換位置</strong>: 頭側與側面交換。</li>
-                    <li><strong>AED 指示電擊</strong>: 檢查頸動脈 (若無脈搏 -> 電擊；若有脈搏 -> 不電擊)。</li>
+                    <li><strong>AED 指示電擊</strong>: 頭側檢查頸動脈 (若無脈搏 -> 電擊；若有脈搏 -> 不電擊)。</li>
                     <li><strong>AED 指示不建議電擊</strong>: 繼續 CPR。</li>
                 </ul>
             </div>
