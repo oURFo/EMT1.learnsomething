@@ -591,6 +591,55 @@ const knowledgeData = {
                 </ul>
             </div>
         `
+    },
+    'critical_cases': {
+        title: '危急個案判斷 (ALS/Major Trauma)',
+        content: `
+            <h3>ALS 判斷標準 (危急個案)</h3>
+            <div class='knowledge-item'>
+                <p><strong>符合下列任一項即為危急個案 (ALS)：</strong></p>
+                <ul>
+                    <li><strong>意識不清</strong>: GCS < 13 分。</li>
+                    <li><strong>呼吸異常</strong>: 呼吸次數 < 10 或 > 29 次/分。</li>
+                    <li><strong>休克徵象</strong>: 收縮壓 (SBP) < 90 或 > 220mmHg。</li>
+                    <li><strong>脈搏異常</strong>: 脈搏 < 50 或 > 150 次/分。</li>
+                    <li><strong>體溫異常</strong>: 體溫 > 41°C 或 < 32°C。</li>
+                    <li><strong>血氧偏低</strong>: SpO2 < 90%。</li>
+                    <li><strong>持續抽搐</strong>: 癲癇持續狀態。</li>
+                    <li><strong>胸痛</strong>: 懷疑心肌梗塞 (AMI)。</li>
+                    <li><strong>腦中風</strong>: 懷疑急性腦中風 (CVA)。</li>
+                </ul>
+            </div>
+
+            <h3>重大創傷 (Major Trauma) 判斷標準</h3>
+            <div class='knowledge-item'>
+                <p><strong>符合下列任一項機轉或傷勢：</strong></p>
+                <ul>
+                    <li><strong>高處墜落</strong>: > 6 公尺 (約 2 層樓高)。</li>
+                    <li><strong>車禍噴飛</strong>: 傷患被拋出車外。</li>
+                    <li><strong>同車死亡</strong>: 同車乘客死亡。</li>
+                    <li><strong>車體變形</strong>: 嚴重車體變形或凹陷 > 50 公分。</li>
+                    <li><strong>脫困時間</strong>: 脫困時間 > 20 分鐘。</li>
+                    <li><strong>行人/自行車</strong>: 被汽車撞擊且拋摔 > 3 公尺。</li>
+                    <li><strong>穿刺傷</strong>: 頭、頸、胸、腹、鼠蹊部穿刺傷。</li>
+                    <li><strong>燒燙傷</strong>: 二度以上燒燙傷面積 > 18% 或顏面、呼吸道燒燙傷。</li>
+                    <li><strong>骨折</strong>: 兩處以上長骨骨折或骨盆骨折。</li>
+                    <li><strong>癱瘓</strong>: 肢體癱瘓。</li>
+                    <li><strong>截肢</strong>: 手腕或腳踝以上截肢。</li>
+                </ul>
+            </div>
+
+            <h3>其他特殊危急狀況</h3>
+            <div class='knowledge-item'>
+                <ul>
+                    <li><strong>OHCA</strong>: 到院前心肺功能停止。</li>
+                    <li><strong>低血糖</strong>: 血糖 < 60 mg/dL 且意識不清。</li>
+                    <li><strong>一氧化碳中毒</strong>: 懷疑 CO 中毒且意識不清。</li>
+                    <li><strong>過敏性休克</strong>: 嚴重過敏反應導致休克。</li>
+                    <li><strong>產科急症</strong>: 急產、胎盤脫出、臍帶脫垂。</li>
+                </ul>
+            </div>
+        `
     }
 };
 
