@@ -731,6 +731,7 @@ const knowledgeData = {
             <div class='knowledge-item'>
                 <p><strong>側面 (主手)</strong>:</p>
                 <ul>
+                    <li>暴露患者胸部。</li>
                     <li>立即開始 CPR (30:2)。</li>
                     <li>等待 AED 評估時，與頭側交換位置。</li>
                 </ul>
