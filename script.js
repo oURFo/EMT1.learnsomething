@@ -601,8 +601,8 @@ const knowledgeData = {
                 <ul>
                     <li><strong>意識不清</strong>: GCS < 14 分。</li>
                     <li><strong>呼吸異常</strong>: 呼吸次數 < 10 或 > 29 次/分。</li>
-                    <li><strong>休克徵象</strong>: 收縮壓 (SBP) < 90 或 > 220 mmHg。</li>
-                    <li><strong>脈搏異常</strong>: 脈搏 < 50 或 > 140 次/分。</li>
+                    <li><strong>休克徵象</strong>: 收縮壓 (SBP) < 90 或 > 200 mmHg。</li>
+                    <li><strong>脈搏異常</strong>: 脈搏 < 50 或 > 150 次/分。</li>
                     <li><strong>體溫異常</strong>: 體溫 > 41°C 或 < 32°C。</li>
                     <li><strong>血氧偏低</strong>: SpO2 < 90%。</li>
                     <li><strong>持續抽搐</strong>: 癲癇持續狀態。</li>
