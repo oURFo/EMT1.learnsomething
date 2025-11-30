@@ -704,14 +704,118 @@ const knowledgeData = {
                 <ul>
                     <li>懷疑顱底骨折 (熊貓眼、耳後瘀斑)。</li>
                     <li>顏面嚴重創傷。</li>
-                    <li>鼻或耳有清澈液或血液流出。</li>
+                    <li>鼻孔阻塞或鼻部感染。</li>
                 </ul>
                 <p><strong>操作流程：</strong></p>
                 <ol>
                     <li><strong>測量</strong>: 鼻尖至耳垂。</li>
                     <li><strong>潤滑</strong>: 使用水溶性潤滑劑。</li>
-                    <li><strong>置入</strong>: 上推鼻尖，選擇較大鼻孔，凹面朝向下，垂直臉部緩慢推入。若遇阻力，勿強行推入，可旋轉或換另一側鼻孔。</li>
+                    <li><strong>置入</strong>: 選擇較大鼻孔，凹面朝向鼻中膈，垂直臉部緩慢推入。若遇阻力，勿強行推入，可旋轉或換另一側鼻孔。</li>
                 </ol>
+            </div>
+        `
+    },
+    'ohca_process': {
+        title: 'OHCA 流程 (OHCA Process)',
+        content: `
+            <h3>初始評估與啟動 (Initial Assessment)</h3>
+            <div class='knowledge-item'>
+                <ul>
+                    <li><strong>意識評估</strong>: 患者無意識。</li>
+                    <li><strong>生命徵象</strong>: 評估無脈搏、無呼吸。</li>
+                    <li><strong>求救</strong>: 主手 (患者側面) 呼叫副手 (患者頭側)：「患者 OHCA」。</li>
+                </ul>
+            </div>
+
+            <h3>第一循環 (Cycle 1: 0-2 min)</h3>
+            <div class='knowledge-item'>
+                <p><strong>側面 (主手)</strong>:</p>
+                <ul>
+                    <li>立即開始 CPR (30:2)。</li>
+                    <li>等待 AED 評估時，與頭側交換位置。</li>
+                </ul>
+                <p><strong>頭側 (副手)</strong>:</p>
+                <ul>
+                    <li>開啟 AED 電源 -> 貼上貼片 -> 插入插頭。</li>
+                    <li>等待 AED 分析 (停止 CPR)。</li>
+                </ul>
+            </div>
+
+            <h3>AED 分析與電擊 (AED Analysis)</h3>
+            <div class='knowledge-item'>
+                <ul>
+                    <li><strong>AED 指示電擊</strong>: 頭、側面喊「我遠離、你遠離、大家遠離」，確認無人接觸後頭側按下電擊鈕。</li>
+                    <li><strong>AED 指示不建議電擊</strong>: 不操作 AED，立即繼續 CPR。</li>
+                </ul>
+            </div>
+
+            <h3>雙人 CPR 與呼吸道 (2-Rescuer CPR)</h3>
+            <div class='knowledge-item'>
+                <p><strong>側面 (原頭側)</strong>:</p>
+                <ul>
+                    <li>開始 CPR (30:2)。</li>
+                </ul>
+                <p><strong>頭側 (原側面)</strong>:</p>
+                <ul>
+                    <li>準備 BVM (開、看、接、調、測、戴)。</li>
+                    <li>配合側面執行 30:2 給氣。</li>
+                    <li><strong>第一次兩口氣後</strong>: 設置口咽呼吸道 (OPA)。
+                        <ul>
+                            <li>凹口向內測量 (口角-耳垂) -> 交叉手指打開口腔 -> 凹口向上置入至硬顎 -> 旋轉 180 度向下推入。</li>
+                        </ul>
+                    </li>
+                    <li><strong>詢問病史 (SAMPLE)</strong>: 主訴、之前、吃、過、藥、敏、感。</li>
+                </ul>
+            </div>
+
+            <h3>第二循環 (Cycle 2: 2 min check)</h3>
+            <div class='knowledge-item'>
+                <ul>
+                    <li><strong>AED 提示分析</strong>: 停止 CPR，不要觸碰病患。</li>
+                    <li><strong>交換位置</strong>: 頭側與側面交換。</li>
+                    <li><strong>AED 指示電擊</strong>: 檢查頸動脈 (若無脈搏 -> 電擊；若有脈搏 -> 不電擊)。</li>
+                    <li><strong>AED 指示不建議電擊</strong>: 繼續 CPR。</li>
+                </ul>
+            </div>
+
+            <h3>持續急救與準備後送 (Ongoing & Transport Prep)</h3>
+            <div class='knowledge-item'>
+                <p><strong>側面</strong>: 繼續 CPR。</p>
+                <p><strong>頭側</strong>:</p>
+                <ul>
+                    <li>使用 BVM 給氣 (30:2)。</li>
+                    <li>繼續詢問病史 (若未完成)。</li>
+                    <li><strong>告知家屬</strong>: 「病患沒有呼吸心跳、屬於危急狀況，需立即送醫，請準備健保卡。」</li>
+                    <li><strong>準備搬運</strong>:
+                        <ul>
+                            <li>通知側面改單人 CPR (30:2)。</li>
+                            <li>將 BVM 移至側面易取得處。</li>
+                            <li>將 AED 放置病患腹部 (不移除貼片)。</li>
+                            <li>移動長背板/擔架至患者身側。</li>
+                            <li>解開束帶。</li>
+                            <li>通知側面：「下一個兩口氣後，搬運患者」。</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>搬運</strong>: 兩口氣後，喊「1, 2, 3」搬運至長背板/擔架。</p>
+            </div>
+
+            <h3>上救護車 (Loading)</h3>
+            <div class='knowledge-item'>
+                <p><strong>側面</strong>: 繼續單人 CPR (30:2)。</p>
+                <p><strong>頭側</strong>:</p>
+                <ul>
+                    <li>收拾器材，將側面所需攜帶器材放置其伸手可及處。</li>
+                    <li>背負三合一氧氣包，手持 BVM。</li>
+                    <li>通知側面：「下一個兩口氣後，移動至救護車」。</li>
+                    <li>操作 BVM 給氣。</li>
+                </ul>
+                <p><strong>移動</strong>:</p>
+                <ul>
+                    <li>給氣中，側面背負器材，移動至腳側。</li>
+                    <li>結束給氣後，同步喊「1, 2, 3」搬運。</li>
+                    <li>喊「1, 2, 3」上救護車。</li>
+                </ul>
             </div>
         `
     }
