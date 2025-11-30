@@ -601,8 +601,8 @@ const knowledgeData = {
                 <ul>
                     <li><strong>意識不清</strong>: GCS < 13 分。</li>
                     <li><strong>呼吸異常</strong>: 呼吸次數 < 10 或 > 29 次/分。</li>
-                    <li><strong>休克徵象</strong>: 收縮壓 (SBP) < 90 或 > 220mmHg。</li>
-                    <li><strong>脈搏異常</strong>: 脈搏 < 50 或 > 150 次/分。</li>
+                    <li><strong>休克徵象</strong>: 收縮壓 (SBP) < 90 mmHg。</li>
+                    <li><strong>脈搏異常</strong>: 脈搏 < 50 或 > 140 次/分。</li>
                     <li><strong>體溫異常</strong>: 體溫 > 41°C 或 < 32°C。</li>
                     <li><strong>血氧偏低</strong>: SpO2 < 90%。</li>
                     <li><strong>持續抽搐</strong>: 癲癇持續狀態。</li>
@@ -638,6 +638,80 @@ const knowledgeData = {
                     <li><strong>過敏性休克</strong>: 嚴重過敏反應導致休克。</li>
                     <li><strong>產科急症</strong>: 急產、胎盤脫出、臍帶脫垂。</li>
                 </ul>
+            </div>
+        `
+    },
+    'chain_of_survival': {
+        title: '生命之鍊 (Chain of Survival)',
+        content: `
+            <h3>成人生命之鍊 (Adult OHCA)</h3>
+            <div class='knowledge-item'>
+                <ol>
+                    <li><strong>儘早求救 (Activation)</strong>: 立即撥打 119。</li>
+                    <li><strong>高品質 CPR (High-Quality CPR)</strong>: 儘早開始壓胸。</li>
+                    <li><strong>AED 電擊 (Defibrillation)</strong>: 儘早使用 AED。</li>
+                    <li><strong>高級心臟救命術 (Advanced Resuscitation)</strong>: 救護人員或醫院執行。</li>
+                    <li><strong>復甦後照護 (Post-Cardiac Arrest Care)</strong>: 醫院端照護。</li>
+                    <li><strong>復原 (Recovery)</strong>: 出院後的復健與追蹤。</li>
+                </ol>
+            </div>
+
+            <h3>兒童生命之鍊 (Pediatric OHCA)</h3>
+            <div class='knowledge-item'>
+                <ol>
+                    <li><strong>預防 (Prevention)</strong>: 預防事故與傷害發生。</li>
+                    <li><strong>儘早求救 (Activation)</strong>: 立即撥打 119。</li>
+                    <li><strong>高品質 CPR (High-Quality CPR)</strong>: 儘早開始壓胸。</li>
+                    <li><strong>高級心臟救命術 (Advanced Resuscitation)</strong>: 救護人員或醫院執行。</li>
+                    <li><strong>復甦後照護 (Post-Cardiac Arrest Care)</strong>: 醫院端照護。</li>
+                    <li><strong>復原 (Recovery)</strong>: 出院後的復健與追蹤。</li>
+                </ol>
+            </div>
+        `
+    },
+    'airway_maintenance': {
+        title: '維持呼吸道 (Airway Maintenance)',
+        content: `
+            <h3>口咽呼吸道 (OPA)</h3>
+            <div class='knowledge-item'>
+                <p><strong>適應症 (Indications)：</strong></p>
+                <ul>
+                    <li>意識不清 (無嘔吐反射)或OHCA 之傷病患。</li>
+                    <li>呼吸道阻塞，需維持呼吸道暢通。</li>
+                    <li>GCS三分以下。</li>
+                </ul>
+                <p><strong>禁忌症 (Contraindications)：</strong></p>
+                <ul>
+                    <li>意識清楚或有嘔吐反射。</li>
+                    <li>口腔內有異物阻塞。</li>
+                </ul>
+                <p><strong>操作流程：</strong></p>
+                <ol>
+                    <li><strong>測量</strong>: 嘴角至耳垂，選擇適合的口咽呼吸道。</li>
+                    <li><strong>置入</strong>: 凹面朝上置入，至硬顎處旋轉 180 度；或使用壓舌板輔助直接置入。</li>
+                    <li><strong>確認</strong>: 確認呼吸道暢通，無嘔吐反射。</li>
+                </ol>
+            </div>
+
+            <h3>鼻咽呼吸道 (NPA)</h3>
+            <div class='knowledge-item'>
+                <p><strong>適應症 (Indications)：</strong></p>
+                <ul>
+                    <li>意識不清但有嘔吐反射 (無法使用 OPA)。</li>
+                    <li>牙關緊閉或口腔創傷。</li>
+                </ul>
+                <p><strong>禁忌症 (Contraindications)：</strong></p>
+                <ul>
+                    <li>懷疑顱底骨折 (熊貓眼、耳後瘀斑)。</li>
+                    <li>顏面嚴重創傷。</li>
+                    <li>鼻或耳有清澈液或血液流出。</li>
+                </ul>
+                <p><strong>操作流程：</strong></p>
+                <ol>
+                    <li><strong>測量</strong>: 鼻尖至耳垂。</li>
+                    <li><strong>潤滑</strong>: 使用水溶性潤滑劑。</li>
+                    <li><strong>置入</strong>: 上推鼻尖，選擇較大鼻孔，凹面朝向下，垂直臉部緩慢推入。若遇阻力，勿強行推入，可旋轉或換另一側鼻孔。</li>
+                </ol>
             </div>
         `
     }
