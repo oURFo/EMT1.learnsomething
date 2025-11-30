@@ -765,7 +765,6 @@ const knowledgeData = {
                             <li>凹口向內測量 (口角-耳垂) -> 交叉手指打開口腔 -> 凹口向上置入至硬顎 -> 旋轉 180 度向下推入。</li>
                         </ul>
                     </li>
-                    <li><strong>詢問病史 (SAMPLE)</strong>: 主訴、之前、吃、過、藥、敏、感。</li>
                 </ul>
             </div>
 
@@ -785,7 +784,7 @@ const knowledgeData = {
                 <p><strong>頭側</strong>:</p>
                 <ul>
                     <li>使用 BVM 給氣 (30:2)。</li>
-                    <li>繼續詢問病史 (若未完成)。</li>
+                    <li><strong>詢問病史 (SAMPLE)</strong>: 主訴、之前、吃、過、藥、敏、感。</li>
                     <li><strong>告知家屬</strong>: 「病患沒有呼吸心跳、屬於危急狀況，需立即送醫，請準備健保卡。」</li>
                     <li><strong>準備搬運</strong>:
                         <ul>
