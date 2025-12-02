@@ -161,15 +161,15 @@
 
         <!-- Learning Menu -->
         <main id="learning-menu" class="menu-container hidden">
-            <button class="menu-btn category-btn" onclick="selectCategory('regulations')">
+            <button class="menu-btn category-btn" onclick="startFlashcardMode('regulations')">
                 <span class="icon">📜</span>
                 <span class="text">法規</span>
             </button>
-            <button class="menu-btn category-btn" onclick="selectCategory('assessment')">
+            <button class="menu-btn category-btn" onclick="startFlashcardMode('assessment')">
                 <span class="icon">📋</span>
                 <span class="text">急救評估</span>
             </button>
-            <button class="menu-btn category-btn" onclick="selectCategory('methods')">
+            <button class="menu-btn category-btn" onclick="startFlashcardMode('methods')">
                 <span class="icon">🩹</span>
                 <span class="text">急救方法</span>
             </button>
@@ -179,27 +179,31 @@
             </button>
         </main>
 
-        <!-- Card Display -->
-        <main id="card-display" class="menu-container hidden">
+        <!-- Flashcard Screen -->
+        <main id="flashcard-screen" class="menu-container hidden">
             <div class="card-header">
                 <button class="back-btn small-back" onclick="showScreen('learning-menu')">
                     <span class="icon">↩️</span> 返回
                 </button>
-                <h2 id="category-title">類別標題</h2>
+                <h2 id="flashcard-category-title">類別標題</h2>
             </div>
 
-            <div class="card-container" id="flashcard">
-                <div class="card-content">
+            <div class="flashcard-container" id="flashcard-container">
+                <div class="flashcard" id="current-flashcard">
                     <div class="card-question">
                         <h3>問題</h3>
-                        <p id="question-text">這裡會顯示問題...</p>
+                        <p id="flashcard-question">這裡會顯示問題...</p>
                     </div>
                     <div class="card-divider"></div>
                     <div class="card-answer">
                         <h3>解答</h3>
-                        <p id="answer-text">這裡會顯示解答...</p>
+                        <p id="flashcard-answer">這裡會顯示解答...</p>
                     </div>
                 </div>
+            </div>
+
+            <div class="flashcard-instruction">
+                <p>左右滑動卡片以切換下一題</p>
             </div>
         </main>
 

@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Add swipe listeners
-    const cardContainer = document.getElementById('flashcard');
+    const cardContainer = document.getElementById('flashcard-container');
     if (cardContainer) {
         cardContainer.addEventListener('mousedown', handleTouchStart);
         cardContainer.addEventListener('touchstart', handleTouchStart);
@@ -56,8 +56,8 @@ function showScreen(screenId) {
     }
 }
 
-// Learning Mode Logic
-function selectCategory(category) {
+// Flashcard Mode Logic
+function startFlashcardMode(category) {
     currentCategory = category;
 
     // Load data from gameData object
@@ -73,9 +73,9 @@ function selectCategory(category) {
             'assessment': '急救評估',
             'methods': '急救方法'
         };
-        document.getElementById('category-title').innerText = titleMap[category];
+        document.getElementById('flashcard-category-title').innerText = titleMap[category];
 
-        showScreen('card-display');
+        showScreen('flashcard-screen');
         showCard();
     } else {
         alert("此類別尚無資料！");
@@ -93,23 +93,21 @@ function showCard() {
     if (currentDeck.length === 0) return;
 
     const card = currentDeck[currentIndex];
-    const cardContainer = document.getElementById('flashcard');
+    const cardElement = document.getElementById('current-flashcard');
 
     // Reset animation classes
-    cardContainer.classList.remove('slide-in', 'slide-out-left', 'slide-out-right');
-    void cardContainer.offsetWidth; // Trigger reflow
-    cardContainer.classList.add('slide-in');
+    cardElement.classList.remove('slide-in', 'slide-out-left', 'slide-out-right');
+    void cardElement.offsetWidth; // Trigger reflow
+    cardElement.classList.add('slide-in');
+    cardElement.style.transform = ''; // Reset transform from drag
 
-    document.getElementById('question-text').innerText = card.question;
-    document.getElementById('answer-text').innerText = card.answer;
-
-    // Scroll to top
-    document.getElementById('card-display').scrollTop = 0;
+    document.getElementById('flashcard-question').innerText = card.question;
+    document.getElementById('flashcard-answer').innerText = card.answer;
 }
 
 function nextCard() {
-    const cardContainer = document.getElementById('flashcard');
-    cardContainer.classList.add('slide-out-left');
+    const cardElement = document.getElementById('current-flashcard');
+    cardElement.classList.add('slide-out-left');
 
     setTimeout(() => {
         currentIndex++;
@@ -123,8 +121,8 @@ function nextCard() {
 }
 
 function prevCard() {
-    const cardContainer = document.getElementById('flashcard');
-    cardContainer.classList.add('slide-out-right');
+    const cardElement = document.getElementById('current-flashcard');
+    cardElement.classList.add('slide-out-right');
 
     setTimeout(() => {
         currentIndex--;
@@ -148,20 +146,34 @@ function handleTouchStart(e) {
 function handleTouchMove(e) {
     if (!isDragging) return;
     currentX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+
+    const diff = currentX - startX;
+    const rotate = diff / 10;
+    const cardElement = document.getElementById('current-flashcard');
+
+    if (cardElement) {
+        cardElement.style.transform = `translateX(${diff}px) rotate(${rotate}deg)`;
+    }
 }
 
 function handleTouchEnd(e) {
     if (!isDragging) return;
     isDragging = false;
 
-    const diff = startX - currentX;
-    const threshold = 50; // Minimum swipe distance
+    const diff = currentX - startX;
+    const threshold = 100; // Increased threshold for better UX
+    const cardElement = document.getElementById('current-flashcard');
 
     if (Math.abs(diff) > threshold) {
-        if (diff > 0) {
+        if (diff < 0) {
             nextCard(); // Swipe Left -> Next
         } else {
             prevCard(); // Swipe Right -> Prev
+        }
+    } else {
+        // Reset position if threshold not met
+        if (cardElement) {
+            cardElement.style.transform = '';
         }
     }
 }
